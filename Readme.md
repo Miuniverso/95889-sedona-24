@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Яночка Минаева](https://up.htmlacademy.ru/htmlcss/24/user/95889).
-* Наставник: `Неизвестно`.
+* Студент: [Яна Минаева](https://up.htmlacademy.ru/htmlcss/24/user/95889).
+* Наставник: [Александр Уразаев](https://htmlacademy.ru/profile/urazaev).
 
 ---
 
