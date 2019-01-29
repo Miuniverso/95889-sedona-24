@@ -7,7 +7,6 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation">
-      <!-->Логотип не является пунктом меню. Его нужно размечать отдельным элементом.</-->
       <a class="main-logo">
         <img class="main-header-logo" src="img/logo.png" alt="логотип Седоны" width="138" height="71">
       </a>
@@ -28,9 +27,6 @@
      <h2 class="visible-hidden">Причины поездки в Седону</h2>
      <p>Седона - небольшой городок в Аризоне, заслуживающий большего</p>
      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-
-     <!-- Список пока размечать не нужно, но стало интересно и я попробовала -->
-
      <ul class="reasons-list">
        <li class="reason-item">
          <div class="reason-description">
@@ -42,7 +38,6 @@
            <img src="http://placehold.it/800x401" alt="гостиница в Седоне" width="800" height="401">
          </div>
        </li>
-       <!-- Так как следующие 3 пункта дают более полное описание вышеописанного пункта ("Настоящий городок"), то можно сделать вложенный список-->
        <li>
          <ul class="city-description">
            <li class="city-description-item">
@@ -65,8 +60,9 @@
          <span>- №2 -</span>
          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
          </div>
-         <img src="http://placehold.it/800x400" alt="мост дьявола в Седоне" width="800" height="400">
-         </p>
+         <div class="reason-image">
+           <img src="http://placehold.it/800x400" alt="мост дьявола в Седоне" width="800" height="400">
+         </div>
        </li>
        <li class="reason-item">
          <div class="reason-description">
@@ -92,43 +88,37 @@
      </ul>
    </section>
    <section class="form-hotels">
-     <!--  Можно ли скрытый заголовок сделать h2, если выше были h3? -->
      <h2 class="visible-hidden">Гостиницы в Седоне</h2>
      <h3>Заитересовались?</h3>
      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложентия гостиниц в Седоне</p>
      <h4>Поиск гостиницы в Седоне</h4>
-     <section>
-
-     </section>
-     <form action="">
-        <!--> Здесь будет форма</-->
-          <p class="input">
-            <p>Дата заезда</p>
-            <span>Выбор даты</span>
-          </p>
-          <p class="output">
-            <p>Дата выезда</p>
-            <span>Выбор даты</span>
-          </p>
-          <p class="adoults">
-            <p>Взрослые</p>
-            <span>Количество человек</span>
-          </p>
-          <p  class="children">
-            <p>Дети</p>
-            <span>Количество человек</span>
-          </p>
-          <!-- Мне кажется, что здесь должна быть кнопка -->
-          <a href="hotels.html">Найти</a>
+     <form>
+       <p class="input">
+         <p>Дата заезда</p>
+         <span>Выбор даты</span>
+       />
+       <p class="output">
+         <p>Дата выезда</p>
+         <span>Выбор даты</span>
+      />
+      <p class="adults">
+        <p>Взрослые</p>
+        <span>Количество человек</span>
+      />
+      <p class="children">
+        <p>Дети</p>
+        <span>Количество человек</span>
+      />
+      <a href="hotels.html">Найти</a>
      </form>
    </section>
   </main>
   <footer>
     <p>#visitSEDONA</p>
     <ul class="social">
-      <li><a href="vk.com">VK</a></li>
-      <li><a href="facebook.com">Facebook</a></li>
-      <li><a href="">youtube.ru</a>YouTube</li>
+      <li><a href="https://vk.com">VK</a></li>
+      <li><a href="https://facebook.com">Facebook</a></li>
+      <li><a href="https://youtube.ru">YouTube</a></li>
     </ul>
     <b>Website by</b>
     <img src="http://placehold.it/104x26" alt="логотип HTML Academy" width="104" height="26">
