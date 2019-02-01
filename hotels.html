@@ -7,7 +7,8 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation">
-      <a class="main-logo">
+      <!-- Логотип — это ссылка на главную страницу  -->
+      <a class="main-logo" href="index.html">
         <img class="main-header-logo" src="img/logo.svg" alt="логотип Седоны" width="138" height="71">
       </a>
       <ul class="main-navigation-links">
@@ -29,9 +30,16 @@
       Найдено:<span>3</span>
     </p>
     <ul class="sort-type">
-      <li class="price"><a href="">По цене</a></li>
-      <li class="type"><a href="">По типу</a></li>
-      <li class="rating"><a href="">По рейтингу</a></li>
+      <!-- Немного смущает, верно ли я сделала: кнопка в пункте списка  -->
+      <li class="price">
+        <button type="button" name="button">о цене</button>
+      </li>
+      <li class="price">
+        <button type="button" name="button">по типу</button>
+      </li>
+      <li class="price">
+        <button type="button" name="button">по рейтингу</button>
+      </li>
     </ul>
     <span class="icon-up"></span>
     <span class="icon-down"></span>
@@ -71,14 +79,16 @@
 
   </main>
   <footer>
-    <p>#visitSEDONA</p>
+    <a href="" class="hashtag">#visitSEDONA</a>
     <ul class="social">
       <li><a href="https://vk.com">VK</a></li>
       <li><a href="https://facebook.com">Facebook</a></li>
       <li><a href="https://youtube.ru">YouTube</a></li>
     </ul>
     <b>Website by</b>
-    <img src="img/logo-name.svg" alt="логотип HTML Academy" width="104" height="26">
+    <a href="">
+      <img src="img/logo-name.svg" alt="логотип HTML Academy" width="104" height="26">
+    </a>
   </footer>
 
 </body>

@@ -7,7 +7,7 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation">
-      <a class="main-logo">
+      <a class="main-logo" href="">
         <img class="main-header-logo" src="img/logo.svg" alt="логотип Седоны" width="138" height="71">
       </a>
       <ul class="main-navigation-links">
@@ -90,38 +90,66 @@
    <section class="form-hotels">
      <h2 class="visible-hidden">Гостиницы в Седоне</h2>
      <h3>Заитересовались?</h3>
-     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложентия гостиниц в Седоне</p>
-     <h4>Поиск гостиницы в Седоне</h4>
-     <form>
-       <p class="input">
-         <p>Дата заезда</p>
-         <span>Выбор даты</span>
-       />
-       <p class="output">
-         <p>Дата выезда</p>
-         <span>Выбор даты</span>
-      />
-      <p class="adults">
-        <p>Взрослые</p>
-        <span>Количество человек</span>
-      />
-      <p class="children">
-        <p>Дети</p>
-        <span>Количество человек</span>
-      />
-      <a href="hotels.html">Найти</a>
+     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+
+     <!-- Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы -->
+
+     <button type="button" name="show-form">Поиск гостиницы в Седоне</button>
+
+     <!-- Не знаю, как верно описать атрибуты у формы  -->
+     <form  action="" method="post">
+      <!--  Обернула каждую строку формы в абзац,
+      так как это именно структурный элемент
+      (так же слышала такой пример в одной из лекций)
+
+      При этом у меня осталось немного недопонимания по поводу
+      значений полей.
+      Очень нуждаюсь здесь в помощи -->
+      <p class="form-data">
+      <label for="arrival">Дата заезда</label>
+      <!-- Иконка календаря в поле ввода даты должна быть добавлена отдельным элементом
+          Не совсем понимаю, как её здесь верно добавить, поэтому использую span-->
+        <input type="date" name="date-arrival" id='arrival'></input>
+        <span class="calendar-icon"></span>
+      </p>
+      <p class="form-data">
+      <label for="departure">Дата выезда</label>
+        <input type="date" name="date-departure" id='departure'></input>
+        <span class="calendar-icon"></span>
+      </p>
+      <p class="form-data">
+      <label for="adults">Взрослые</label>
+        <button type="button" name="button-minus" aria-label='уменьшить количество взрослых'></button>
+          <input type="number" name="count-adults" id='adults'></input>
+        <button type="button" name="button-plus" aria-label='увеличить количество  взрослых'></button>
+      </p>
+      <p class="form-data">
+      <label for="children">Дети</label>
+      <button type="button" name="button-minus" aria-label='уменьшить количество детей'></button>
+        <input type="number" name="count-children" id='children'></input>
+      <button type="button" name="button-plus" aria-label='увеличить количество детей'></button>
+      </p>
+      <!-- Вот с этой кнопкой/ссылкой у меня какой-то тупняк начинается.
+           Так как я по этой кнопке отправляю данные формы, то это вроде кнопка type='submit'.
+           Но при этом она ведет меня на ссылку с отелями, значит ссылка.
+           Немного здесь запуталась -->
+      <button type='submit'>Найти</button>
      </form>
    </section>
   </main>
   <footer>
-    <p>#visitSEDONA</p>
+
+    <!--  Переделала хештег в ссылку  -->
+    <a href="" class="hashtag">#visitSEDONA</a>
     <ul class="social">
       <li><a href="https://vk.com">VK</a></li>
       <li><a href="https://facebook.com">Facebook</a></li>
       <li><a href="https://youtube.ru">YouTube</a></li>
     </ul>
     <b>Website by</b>
-    <img src="img/logo-name.svg" alt="логотип HTML Academy" width="104" height="26">
+    <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <img src="img/logo-name.svg" alt="логотип HTML Academy" width="104" height="26">
+    </a>
   </footer>
 
 </body>
