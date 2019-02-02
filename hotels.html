@@ -7,7 +7,6 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation">
-      <!-- Логотип — это ссылка на главную страницу  -->
       <a class="main-logo" href="index.html">
         <img class="main-header-logo" src="img/logo.svg" alt="логотип Седоны" width="138" height="71">
       </a>
@@ -30,19 +29,21 @@
       Найдено:<span>3</span>
     </p>
     <ul class="sort-type">
-      <!-- Немного смущает, верно ли я сделала: кнопка в пункте списка  -->
       <li class="price">
-        <button type="button" name="button">о цене</button>
+        <a href="#">по цене</a>
       </li>
       <li class="price">
-        <button type="button" name="button">по типу</button>
+        <a href="#">по типу</a>
       </li>
       <li class="price">
-        <button type="button" name="button">по рейтингу</button>
+        <a href="#">по рейтингу</a>
       </li>
     </ul>
-    <span class="icon-up"></span>
-    <span class="icon-down"></span>
+    <ul class="sort-icons">
+      <li></li>
+      <a href="" class="icon-up"></a>
+      <a href="" class="icon-down"></a>
+    </ul>
    </section>
   <section class="hotels-result">
     <div class="hotel-item">
@@ -79,17 +80,16 @@
 
   </main>
   <footer>
-    <a href="" class="hashtag">#visitSEDONA</a>
+    <a href="#" class="hashtag">#visitSEDONA</a>
     <ul class="social">
       <li><a href="https://vk.com">VK</a></li>
       <li><a href="https://facebook.com">Facebook</a></li>
       <li><a href="https://youtube.ru">YouTube</a></li>
     </ul>
     <b>Website by</b>
-    <a href="">
+    <a href="https://htmlacademy.ru/intensive/htmlcss">
       <img src="img/logo-name.svg" alt="логотип HTML Academy" width="104" height="26">
     </a>
   </footer>
-
 </body>
 </html>

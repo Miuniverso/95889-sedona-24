@@ -7,7 +7,7 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation">
-      <a class="main-logo" href="">
+      <a class="main-logo">
         <img class="main-header-logo" src="img/logo.svg" alt="логотип Седоны" width="138" height="71">
       </a>
       <ul class="main-navigation-links">
@@ -91,13 +91,8 @@
      <h2 class="visible-hidden">Гостиницы в Седоне</h2>
      <h3>Заитересовались?</h3>
      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-
-     <!-- Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска гостиницы -->
-
      <button type="button" name="show-form">Поиск гостиницы в Седоне</button>
-
-     <!-- Не знаю, как верно описать атрибуты у формы  -->
-     <form  action="" method="post">
+     <form  action="https://echo.htmlacademy.ru" method="post">
       <!--  Обернула каждую строку формы в абзац,
       так как это именно структурный элемент
       (так же слышала такой пример в одной из лекций)
@@ -107,40 +102,32 @@
       Очень нуждаюсь здесь в помощи -->
       <p class="form-data">
       <label for="arrival">Дата заезда</label>
-      <!-- Иконка календаря в поле ввода даты должна быть добавлена отдельным элементом
-          Не совсем понимаю, как её здесь верно добавить, поэтому использую span-->
-        <input type="date" name="date-arrival" id='arrival'></input>
-        <span class="calendar-icon"></span>
+        <input type="text" name="date-arrival" id="arrival" placeholder="24 апреля 2017"></input>
+        <button type="button" class="calendar-icon"></button>
       </p>
       <p class="form-data">
       <label for="departure">Дата выезда</label>
-        <input type="date" name="date-departure" id='departure'></input>
-        <span class="calendar-icon"></span>
+        <input type="text" name="date-departure" id="departure" placeholder="4 июля 2017"></input>
+        <button type="button" class="calendar-icon"></button>
       </p>
       <p class="form-data">
       <label for="adults">Взрослые</label>
-        <button type="button" name="button-minus" aria-label='уменьшить количество взрослых'></button>
-          <input type="number" name="count-adults" id='adults'></input>
-        <button type="button" name="button-plus" aria-label='увеличить количество  взрослых'></button>
+        <button type="button" name="button-minus" aria-label="уменьшить количество взрослых"></button>
+          <input type="number" name="count-adults" id="adults" min="0" value="2"></input>
+        <button type="button" name="button-plus" aria-label="увеличить количество  взрослых"></button>
       </p>
       <p class="form-data">
       <label for="children">Дети</label>
-      <button type="button" name="button-minus" aria-label='уменьшить количество детей'></button>
-        <input type="number" name="count-children" id='children'></input>
-      <button type="button" name="button-plus" aria-label='увеличить количество детей'></button>
+      <button type="button" name="button-minus" aria-label="уменьшить количество детей"></button>
+        <input type="number" name="count-children" id="children" min="0" value="0"></input>
+      <button type="button" name="button-plus" aria-label="увеличить количество детей"></button>
       </p>
-      <!-- Вот с этой кнопкой/ссылкой у меня какой-то тупняк начинается.
-           Так как я по этой кнопке отправляю данные формы, то это вроде кнопка type='submit'.
-           Но при этом она ведет меня на ссылку с отелями, значит ссылка.
-           Немного здесь запуталась -->
-      <button type='submit'>Найти</button>
+      <button type="submit">Найти</button>
      </form>
    </section>
   </main>
   <footer>
-
-    <!--  Переделала хештег в ссылку  -->
-    <a href="" class="hashtag">#visitSEDONA</a>
+    <a href="#" class="hashtag">#visitSEDONA</a>
     <ul class="social">
       <li><a href="https://vk.com">VK</a></li>
       <li><a href="https://facebook.com">Facebook</a></li>
@@ -151,6 +138,5 @@
       <img src="img/logo-name.svg" alt="логотип HTML Academy" width="104" height="26">
     </a>
   </footer>
-
 </body>
 </html>
