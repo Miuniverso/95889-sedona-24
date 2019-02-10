@@ -1,0 +1,374 @@
+/*  Указывала везде цвет в формате rgba
+Насколько это верно?
+ */
+
+ /* rgba(0, 0, 0, 1) black
+    rgba(255, 255, 255, 1) white */
+
+html {
+  background-color: rgba(242, 242, 242, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 5px 0px 15px rgba(0,1,1, 0.2);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.main-navigation {
+  /* height: 56px; */
+
+  background-color: #ffffff;
+}
+
+.main-navigation-links {
+  list-style: none;
+}
+
+.main-navigation-links a {
+  color: rgba(0, 0, 0, 1);
+}
+
+.main-navigation-links a:hover {
+  color: rgba(129, 179, 210, 1);
+}
+
+.main-navigation-links a:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.intro {
+  text-align: center;
+
+  background-image: url("../img/poligon.jpg"), url("../img/intro-background.jpg");
+}
+
+.reasons {
+  text-align: center;
+}
+
+.reasons-title p:first-child {
+  width: 470px;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.reasons-title p:last-child {
+  width: 519px;
+
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.reasons-list,
+.city-description {
+  list-style: none;
+
+  padding: 0;
+}
+
+.reason-item h3,
+.city-description-item h3 {
+  font-size: 21px;
+}
+
+.reason-item span,
+.reason-item p,
+.city-description-item p  {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+}
+
+.reason-with-image {
+  background-color: rgba(129, 179, 210, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.reason-item:nth-child(n+4) {
+  background-color: rgba(238, 238, 238, 1);
+}
+
+.form-hotels {
+  text-align: center;
+}
+
+.form-hotels h3 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+
+  color: rgba(0, 0, 0, 1);
+}
+
+.form-description {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+button[name="show-form"] {
+  width: 568px;
+  height: 86px;
+
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(118, 99, 87, 1);
+}
+
+button[name="show-form"]:hover {
+  background-color: rgba(96, 78, 67, 1);
+}
+
+button[name="show-form"]:focus {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(80, 62, 51, 1);
+}
+
+.hotel-form {
+  width: 568px;
+  height: 395px;
+}
+
+.hotel-form input {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
+}
+
+.hotel-form input:hover {
+  background-color: rgba(235, 235, 235, 1);
+}
+
+.hotel-form input:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/*1) не совсем поняла, как изменить цвет плейсхолдера?
+ 2) так как здесь селектор не по классу, я не прохожу критерий Д25?*/
+input[placeholder] {
+  width: 346px;
+  height: 38px;
+}
+
+input[value] {
+  width: 38px;
+  height: 38px;
+}
+
+.calendar-icon:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.calendar-icon:focus {
+  color: rgba(129, 179, 210, 1);
+}
+
+button[name="button-minus"],
+button[name="button-plus"] {
+  width: 38px;
+  height: 38px;
+
+  background-color: rgba(242, 242, 242, 1);
+}
+
+button[name="button-minus"]:hover,
+button[name="button-plus"]:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+button[name="button-minus"]:focus,
+button[name="button-plus"]:focus {
+  color: rgba(129, 179, 210, 1);
+}
+
+.btn-found {
+  width: 458px;
+  height: 58px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(129, 179, 210, 1);
+}
+
+.btn-found:hover {
+  background-color: rgba(102, 158, 192, 1);
+}
+
+.btn-found:focus {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(84, 150, 189, 1);
+}
+
+.main-footer {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.main-footer a {
+  color: rgba(0, 0, 0, 1);
+}
+
+.social li {
+  width: 46px;
+  height: 48px;
+
+  background-color: rgba(129, 179, 210, 1);
+}
+
+.social li:hover {
+  background-color: rgba(102, 158, 192, 1);
+}
+
+.social li:focus {
+  background-color: rgba(84, 150, 189, 1);
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+/*  не знаю, как изменить цвет логотипа  */
+.logo-academy {
+  color: black;
+}
+
+/*  HOTELS  */
+
+.link-current {
+  color: rgba(118, 99, 87, 1);
+}
+
+.sort-result {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.sort-title {
+  font-size: 12px;
+  line-height: 18px;
+
+  color: rgba(0, 0, 0, 1);
+}
+
+.sort-type {
+  list-style: none;
+
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.sort-type a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(129, 179, 210, 1);
+}
+
+.sort-type a:hover {
+  color: rgba(129, 179, 210, 1);
+}
+
+.sort-type a:focus {
+  color: rgba(0, 0, 0, 1);
+  border: none;
+}
+
+.type-current a {
+  color: rgba(129, 179, 210, 1);
+  border: none;
+}
+
+.sort-icon a {
+  border: none;
+  opacity: 0.3;
+}
+
+.sort-icon a:hover {
+  opacity: 1;
+}
+
+/*  не знаю, как изменить цвет svg  */
+.sort-icon a:focus {
+
+}
+
+.hotel-item {
+  padding: 30px 0;
+  border: 1px solid black;
+}
+
+.hotel-item h2 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.hotel-item p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+.hotel-item a {
+  padding: 8px 16px;
+}
+
+.hotel-item a[href="hotel-info.html"] {
+  width: 110px;
+  height: 27px;
+
+  margin: auto;
+
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(129, 179, 210, 1);
+}
+
+.hotel-item a[href="booking.html"] {
+  width: 142px;
+  height: 27px;
+
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(118, 99, 87, 1);
+}
+
+.hotel-rating {
+  width: 111px;
+  height: 21px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+
+  padding: 8px 16px;
+  color: rgba(102, 102, 102, 1);
+  background-color: rgba(242, 242, 242, 1);
+}

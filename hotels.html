@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="main-header">
+  <header class="inner-header">
     <nav class="main-navigation">
       <a class="main-logo" href="index.html">
         <img class="main-header-logo" src="img/logo.svg" alt="логотип Седоны" width="138" height="71">
@@ -14,7 +17,7 @@
         <li><a href="info.hrml">Информация</a></li>
         <li><a href="photo-and-video.html">Фото и видео</a></li>
         <li><a href="map.html">Карта штата</a></li>
-        <li><a href="hotels.html">Гостиницы</a></li>
+        <li class="link-current">Гостиницы</li>
       </ul>
     </nav>
   </header>
@@ -28,8 +31,11 @@
     <p class="sort-result">
       Найдено:<span>3</span>
     </p>
+    <p class="sort-title">
+      сортировка
+    </p>
     <ul class="sort-type">
-      <li class="price">
+      <li class="price type-current">
         <a href="#">по цене</a>
       </li>
       <li class="type">
@@ -39,10 +45,14 @@
         <a href="#">по рейтингу</a>
       </li>
       <li class="sort-icon">
-        <a href="#" class="icon-up"></a>
+        <a href="#" class="icon-up">
+          <img src="img/icon-up.svg" alt="сортировка по возрастанию">
+        </a>
       </li>
       <li class="sort-icon">
-        <a href="#" class="icon-down"></a>
+        <a href="#" class="icon-down">
+          <img src="img/icon-down.svg" alt="сортировка по убыванию">
+        </a>
       </li>
     </ul>
    </section>
@@ -80,7 +90,7 @@
   </section>
 
   </main>
-  <footer>
+  <footer class="inner-footer">
     <a href="#" class="hashtag">#visitSEDONA</a>
     <ul class="social">
       <li><a href="https://vk.com">VK</a></li>

@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="main-header">
@@ -21,21 +24,23 @@
   <main>
    <section class="intro">
      <h1 class="visually-hidden">Город Седона</h1>
-     <img class="intro-background" src="img/welcome.png" alt="Седона" width="458" height="352">
+     <img class="intro-welcome" src="img/welcome.png" alt="Седона" width="458" height="352">
    </section>
    <section class="reasons">
      <h2 class="visible-hidden">Причины поездки в Седону</h2>
-     <p>Седона - небольшой городок в Аризоне, заслуживающий большего</p>
-     <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+     <div class="reasons-title">
+       <p>Седона - небольшой городок в Аризоне, заслуживающий большего</p>
+       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+     </div>
      <ul class="reasons-list">
-       <li class="reason-item">
+       <li class="reason-item reason-with-image">
          <div class="reason-description">
            <h3>Настоящий городок</h3>
            <span>- №1 -</span>
            <p>Седона - не аттрацион для туристов, там течет своя жизнь</p>
          </div>
          <div class="reason-image">
-           <img src="" alt="гостиница в Седоне" width="800" height="401">
+           <img src="img/main-hotel.jpg" alt="гостиница в Седоне" width="800" height="401">
          </div>
        </li>
        <li>
@@ -54,14 +59,14 @@
            </li>
          </ul>
        </li>
-       <li class="reason-item">
+       <li class="reason-item reason-with-image">
          <div class="reason-description">
          <h3>Там есть мост дьявола</h3>
          <span>- №2 -</span>
          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
          </div>
          <div class="reason-image">
-           <img src="" alt="мост дьявола в Седоне" width="800" height="400">
+           <img src="img/bridge.jpg" alt="мост дьявола в Седоне" width="800" height="400">
          </div>
        </li>
        <li class="reason-item">
@@ -90,43 +95,44 @@
    <section class="form-hotels">
      <h2 class="visible-hidden">Гостиницы в Седоне</h2>
      <h3>Заитересовались?</h3>
-     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+     <p class="form-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
      <button type="button" name="show-form">Поиск гостиницы в Седоне</button>
-     <form  action="https://echo.htmlacademy.ru" method="post">
+     <form class="hotel-form" action="https://echo.htmlacademy.ru" method="post">
       <!--  Обернула каждую строку формы в абзац,
       так как это именно структурный элемент
-      (так же слышала такой пример в одной из лекций)
-
-      При этом у меня осталось немного недопонимания по поводу
-      значений полей.
-      Очень нуждаюсь здесь в помощи -->
-      <p class="form-data">
-      <label for="arrival">Дата заезда</label>
-        <input type="text" name="date-arrival" id="arrival" placeholder="24 апреля 2017"></input>
-        <button type="button" class="calendar-icon"></button>
-      </p>
-      <p class="form-data">
-      <label for="departure">Дата выезда</label>
-        <input type="text" name="date-departure" id="departure" placeholder="4 июля 2017"></input>
-        <button type="button" class="calendar-icon"></button>
-      </p>
-      <p class="form-data">
-      <label for="adults">Взрослые</label>
-        <button type="button" name="button-minus" aria-label="уменьшить количество взрослых"></button>
-          <input type="number" name="count-adults" id="adults" min="0" value="2"></input>
-        <button type="button" name="button-plus" aria-label="увеличить количество  взрослых"></button>
-      </p>
-      <p class="form-data">
-      <label for="children">Дети</label>
-      <button type="button" name="button-minus" aria-label="уменьшить количество детей"></button>
-        <input type="number" name="count-children" id="children" min="0" value="0"></input>
-      <button type="button" name="button-plus" aria-label="увеличить количество детей"></button>
-      </p>
-      <button type="submit">Найти</button>
+      (так же слышала такой пример в одной из лекций) -->
+        <p class="form-data">
+        <label for="arrival">Дата заезда</label>
+          <input type="text" name="date-arrival" id="arrival" placeholder="24 апреля 2017"></input>
+          <button type="button" class="calendar-icon" aria-label='открыть календарь для выбора даты заезда'>
+            <img src="img/calendar.svg" alt="календарь">
+          </button>
+        </p>
+        <p class="form-data">
+        <label for="departure">Дата выезда</label>
+          <input type="text" name="date-departure" id="departure" placeholder="4 июля 2017"></input>
+          <button type="button" class="calendar-icon" aria-label='открыть календарь для выбора даты выезда'>
+            <img src="img/calendar.svg" alt="календарь">
+          </button>
+        </p>
+        <p class="form-data">
+          <!--  мне нужно самой отрисовать + и - на кнопках?  -->
+        <label for="adults">Взрослые</label>
+          <button type="button" name="button-minus" aria-label="уменьшить количество взрослых"></button>
+            <input type="number" name="count-adults" id="adults" min="0" value="2"></input>
+          <button type="button" name="button-plus" aria-label="увеличить количество  взрослых"></button>
+        </p>
+        <p class="form-data">
+        <label for="children">Дети</label>
+        <button type="button" name="button-minus" aria-label="уменьшить количество детей"></button>
+          <input type="number" name="count-children" id="children" min="0" value="0"></input>
+        <button type="button" name="button-plus" aria-label="увеличить количество детей"></button>
+        </p>
+        <button class="btn-found" type="submit">Найти</button>
      </form>
    </section>
   </main>
-  <footer>
+  <footer class="main-footer">
     <a href="#" class="hashtag">#visitSEDONA</a>
     <ul class="social">
       <li><a href="https://vk.com">VK</a></li>
@@ -135,7 +141,7 @@
     </ul>
     <b>Website by</b>
     <a href="https://htmlacademy.ru/intensive/htmlcss">
-      <img src="img/logo-name.svg" alt="логотип HTML Academy" width="104" height="26">
+      <img class="logo-academy" src="img/logo-name.svg" alt="логотип HTML Academy" width="104" height="26">
     </a>
   </footer>
 </body>
