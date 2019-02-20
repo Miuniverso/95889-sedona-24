@@ -7,10 +7,11 @@
 
 html {
   background-color: rgba(242, 242, 242, 1);
+  text-align: center;
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 1200px;
 
@@ -29,15 +30,70 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*  HEADER + NAVIGATION  */
+
 
 .main-navigation {
-  /* height: 56px; */
+  position: relative;
 
   background-color: #ffffff;
+
 }
 
 .main-navigation-links {
   list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+/*  3.4. Главное меню: четыре ячейки одинаковой ширины.
+Для первых двух пунктов выравнивание текста по левому краю,
+для двух последних — по правому.   */
+
+.main-navigation-links li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 20%;
+}
+
+.main-navigation-links li:nth-child(1),
+.main-navigation-links li:nth-child(2)  {
+  text-align: left;
+}
+
+.main-navigation-links li:nth-child(3),
+.main-navigation-links li:nth-child(4)  {
+  text-align: right;
+}
+
+.main-navigation-links li:first-child {
+  margin-left: 6%;
+}
+
+.main-navigation-links li:last-child {
+  margin-right: 6%;
+}
+
+.main-navigation-links li:nth-child(2) {
+  margin-right: 7%;
+}
+
+.main-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-navigation-links a {
@@ -52,14 +108,26 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+/*  CONTENT  */
+
 .intro {
   text-align: center;
 
-  background-image: url("../img/poligon.jpg"), url("../img/intro-background.jpg");
+  background-image: url("../img/polygon.svg"), url("../img/background.jpg");
+  background-position: bottom center, 50% 21%;
+  background-repeat: no-repeat, no-repeat;
+  padding-bottom: 70px;
 }
 
+.intro-welcome {
+  padding-top: 76px;
+}
+
+
+/*  REASONS  */
+
 .reasons {
-  text-align: center;
+  padding-top: 20px;
 }
 
 .reasons-title p:first-child {
@@ -68,6 +136,10 @@ a {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 21px;
 }
 
 .reasons-title p:last-child {
@@ -75,18 +147,85 @@ a {
 
   font-size: 14px;
   font-weight: normal;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6px;
+  padding-bottom: 36px;
 }
 
 .reasons-list,
 .city-description {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 
   padding: 0;
 }
 
+.reason-with-image {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-height: 256px;
+}
+
+.reason-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+
+.reason-description p {
+  padding: 0 55px;
+}
+
+.reason-description h3 {
+  width: 150px;
+  margin: 0 auto 20px auto;
+}
+
+.city-description-item {
+  position: relative;
+}
+
+/* ВОПРОС: можно ли так было указать ширину, как сделала я? */
+
+.city-description li {
+  flex-basis: 33%;
+  margin: 140px 0 67px;
+}
+
+.city-description-item::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: -88px;
+  transform: translateX(-50%);
+}
+
+.item-home::before {
+  background: url("../img/icon-home.svg") 50% 100% no-repeat;
+}
+
+.item-food::before {
+  background: url("../img/icon-food.svg") 50% 100% no-repeat;
+}
+
+.item-souvenirs::before {
+  background: url("../img/icon-souvenirs.svg") 50% 100% no-repeat;
+}
+
 .reason-item h3,
 .city-description-item h3 {
   font-size: 21px;
+  line-height: 21px;
+
 }
 
 .reason-item span,
@@ -95,6 +234,7 @@ a {
   font-size: 14px;
   font-weight: normal;
   line-height: 21px;
+  padding: 5px 49px 0;
 }
 
 .reason-with-image {
@@ -104,16 +244,24 @@ a {
 
 .reason-item:nth-child(n+4) {
   background-color: rgba(238, 238, 238, 1);
+  padding: 44px 0;
 }
+
+/*  FORM  */
 
 .form-hotels {
   text-align: center;
+
+  padding-top: 12px;
 }
 
 .form-hotels h3 {
   font-size: 30px;
   font-weight: bold;
   line-height: 36px;
+
+  margin: 0;
+  padding-top: 30px;
 
   color: rgba(0, 0, 0, 1);
 }
@@ -122,11 +270,13 @@ a {
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
+  padding-top: 10px;
 }
 
 button[name="show-form"] {
   width: 568px;
   height: 86px;
+  margin-top: 30px;
 
   font-size: 21px;
   line-height: 26px;
@@ -145,15 +295,29 @@ button[name="show-form"]:focus {
   background-color: rgba(80, 62, 51, 1);
 }
 
+/* ВОПРОС:
+я сделала ширину формы не под ширину кнопки сверху,
+а под контент, чтобы с помощью флексов и space-between быстро
+раскидать строки формы в соответсвии с макетом.
+Это читерство и так не делается? */
+
 .hotel-form {
-  width: 568px;
-  height: 395px;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 458px;
+  max-height: 395px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* outline: 1px solid; */
 }
 
 .hotel-form input {
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
+  text-transform: uppercase;
 
   background-color: rgba(242, 242, 242, 1);
   border: none;
@@ -167,8 +331,20 @@ button[name="show-form"]:focus {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/*1) не совсем поняла, как изменить цвет плейсхолдера?
+/*   вышеописанное читерство  */
+.arrival,
+.departure {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/*
+ВОПРОСЫ:
+
+1) не совсем поняла, как изменить цвет плейсхолдера?
  2) так как здесь селектор не по классу, я не прохожу критерий Д25?*/
+
 input[placeholder] {
   width: 346px;
   height: 38px;
@@ -179,12 +355,25 @@ input[value] {
   height: 38px;
 }
 
-.calendar-icon:hover {
-  color: rgba(0, 0, 0, 1);
+.calendar-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+
+  background-color: transparent;
+  border: none;
 }
 
-.calendar-icon:focus {
-  color: rgba(129, 179, 210, 1);
+.calendar-icon path {
+  fill: rgba(202, 202, 202, 1);
+}
+
+.calendar-icon:hover path {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.calendar-icon:focus path {
+  fill: rgba(129, 179, 210, 1);
 }
 
 button[name="button-minus"],

@@ -27,7 +27,7 @@
      <img class="intro-welcome" src="img/welcome.png" alt="Седона" width="458" height="352">
    </section>
    <section class="reasons">
-     <h2 class="visible-hidden">Причины поездки в Седону</h2>
+     <h2 class="visually-hidden">Причины поездки в Седону</h2>
      <div class="reasons-title">
        <p>Седона - небольшой городок в Аризоне, заслуживающий большего</p>
        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -40,33 +40,33 @@
            <p>Седона - не аттрацион для туристов, там течет своя жизнь</p>
          </div>
          <div class="reason-image">
-           <img src="img/main-hotel.jpg" alt="гостиница в Седоне" width="800" height="401">
+           <img src="img/main-hotel.jpg" alt="гостиница в Седоне" width="800" height="256">
          </div>
        </li>
        <li>
          <ul class="city-description">
-           <li class="city-description-item">
+           <li class="city-description-item item-home">
              <h3>Жильё</h3>
              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
            </li>
-           <li class="city-description-item">
+           <li class="city-description-item item-food">
              <h3>Еда</h3>
              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
            </li>
-           <li class="city-description-item">
+           <li class="city-description-item item-souvenirs">
              <h3>Сувениры</h3>
              <p>Не только китайского, но и местного производства!</p>
            </li>
          </ul>
        </li>
        <li class="reason-item reason-with-image">
+         <div class="reason-image">
+           <img src="img/bridge.jpg" alt="мост дьявола в Седоне" width="800" height="256">
+         </div>
          <div class="reason-description">
          <h3>Там есть мост дьявола</h3>
          <span>- №2 -</span>
          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-         </div>
-         <div class="reason-image">
-           <img src="img/bridge.jpg" alt="мост дьявола в Седоне" width="800" height="400">
          </div>
        </li>
        <li class="reason-item">
@@ -93,36 +93,39 @@
      </ul>
    </section>
    <section class="form-hotels">
-     <h2 class="visible-hidden">Гостиницы в Седоне</h2>
+     <h2 class="visually-hidden">Гостиницы в Седоне</h2>
      <h3>Заитересовались?</h3>
      <p class="form-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
      <button type="button" name="show-form">Поиск гостиницы в Седоне</button>
+
      <form class="hotel-form" action="https://echo.htmlacademy.ru" method="post">
       <!--  Обернула каждую строку формы в абзац,
       так как это именно структурный элемент
       (так же слышала такой пример в одной из лекций) -->
-        <p class="form-data">
+        <p class="form-data arrival">
         <label for="arrival">Дата заезда</label>
           <input type="text" name="date-arrival" id="arrival" placeholder="24 апреля 2017"></input>
           <button type="button" class="calendar-icon" aria-label='открыть календарь для выбора даты заезда'>
-            <img src="img/calendar.svg" alt="календарь">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+              <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
           </button>
         </p>
-        <p class="form-data">
+        <p class="form-data departure">
         <label for="departure">Дата выезда</label>
           <input type="text" name="date-departure" id="departure" placeholder="4 июля 2017"></input>
           <button type="button" class="calendar-icon" aria-label='открыть календарь для выбора даты выезда'>
-            <img src="img/calendar.svg" alt="календарь">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+              <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
           </button>
         </p>
-        <p class="form-data">
+        <p class="form-data adults">
           <!--  мне нужно самой отрисовать + и - на кнопках?  -->
         <label for="adults">Взрослые</label>
           <button type="button" name="button-minus" aria-label="уменьшить количество взрослых"></button>
             <input type="number" name="count-adults" id="adults" min="0" value="2"></input>
           <button type="button" name="button-plus" aria-label="увеличить количество  взрослых"></button>
         </p>
-        <p class="form-data">
+        <p class="form-data children">
         <label for="children">Дети</label>
         <button type="button" name="button-minus" aria-label="уменьшить количество детей"></button>
           <input type="number" name="count-children" id="children" min="0" value="0"></input>
