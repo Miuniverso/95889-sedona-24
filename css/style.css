@@ -192,15 +192,13 @@ a {
   position: relative;
 }
 
-/* ВОПРОС: можно ли так было указать ширину, как сделала я? */
-
 .city-description li {
   flex-basis: 33%;
   margin: 140px 0 67px;
 }
 
 .city-description-item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 80px;
   height: 80px;
@@ -295,22 +293,30 @@ button[name="show-form"]:focus {
   background-color: rgba(80, 62, 51, 1);
 }
 
-/* ВОПРОС:
-я сделала ширину формы не под ширину кнопки сверху,
-а под контент, чтобы с помощью флексов и space-between быстро
-раскидать строки формы в соответсвии с макетом.
-Это читерство и так не делается? */
-
 .hotel-form {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 
   width: 458px;
   max-height: 395px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 40px;
+  padding-left: 54px;
+  padding-right: 54px;
+  padding-bottom: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: rgba(255, 255, 255, 1);
 
   /* outline: 1px solid; */
+}
+
+.form-data {
+  display: flex;
+  align-items: center;
+
 }
 
 .hotel-form input {
@@ -331,7 +337,6 @@ button[name="show-form"]:focus {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/*   вышеописанное читерство  */
 .arrival,
 .departure {
   position: relative;
@@ -339,18 +344,21 @@ button[name="show-form"]:focus {
   justify-content: space-between;
   width: 100%;
 }
-/*
-ВОПРОСЫ:
 
-1) не совсем поняла, как изменить цвет плейсхолдера?
- 2) так как здесь селектор не по классу, я не прохожу критерий Д25?*/
+.adults {
+  margin-right: auto;
+}
 
-input[placeholder] {
+.children {
+  margin-left: auto;
+}
+
+.date-input {
   width: 346px;
   height: 38px;
 }
 
-input[value] {
+.counter {
   width: 38px;
   height: 38px;
 }
@@ -397,6 +405,7 @@ button[name="button-plus"]:focus {
 .btn-found {
   width: 458px;
   height: 58px;
+  margin-top: 39px;
 
   font-size: 21px;
   line-height: 26px;
@@ -416,20 +425,68 @@ button[name="button-plus"]:focus {
   background-color: rgba(84, 150, 189, 1);
 }
 
-.main-footer {
+/*  Почему-то карту пришлось тяжко выравнивать
+с помощью таких больших цифр: 2167px
+Наверно это костыль.
+Как сделать лучше?  */
+.map {
+  position: absolute;
+  left: 50%;
+  top: 2167px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/*  установка футера через 63px тоже как-то неправильно.
+Но не понимаю, как сделать нормально и адекватно  */
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 63px;
+  padding: 30px 0px;
+
+  width: inherit;
+  z-index: 2;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.main-footer a {
+.hashtag {
+  flex-grow: 1;
   color: rgba(0, 0, 0, 1);
 }
 
+.social {
+  flex-grow: 1;
+}
+
+.hashtag {
+  text-decoration: inherit;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
 .social li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 46px;
   height: 48px;
 
   background-color: rgba(129, 179, 210, 1);
+}
+
+.social li:nth-child(2) {
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .social li:hover {
@@ -440,14 +497,33 @@ button[name="button-plus"]:focus {
   background-color: rgba(84, 150, 189, 1);
 }
 
-.main-footer ul {
-  list-style: none;
+.copiright {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 29px;
+  align-items: center;
 }
 
-/*  не знаю, как изменить цвет логотипа  */
-.logo-academy {
-  color: black;
+.copiright b {
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
 }
+
+.logo-academy path {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.logo-academy:hover path {
+  fill: rgba(129, 179, 210, 1);
+}
+
+.logo-academy:focus path {
+  fill: rgba(202, 202, 202, 1);
+}
+
 
 /*  HOTELS  */
 
@@ -455,25 +531,47 @@ button[name="button-plus"]:focus {
   color: rgba(118, 99, 87, 1);
 }
 
+.sort {
+  display: flex;
+  align-items: center;
+  padding: 0px 73px;
+
+}
+
 .sort-result {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  margin: 0;
 }
 
 .sort-title {
   font-size: 12px;
   line-height: 18px;
+  margin: 0;
+  padding-left: 50px;
 
   color: rgba(0, 0, 0, 1);
 }
 
 .sort-type {
+  display: flex;
+
+  margin: 0;
   list-style: none;
 
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
+}
+
+.sort-icons {
+  list-style: none;
+  margin-left: auto;
+}
+
+.sort-type li {
+  padding-left: 30px;
 }
 
 .sort-type a {
@@ -496,39 +594,78 @@ button[name="button-plus"]:focus {
   border: none;
 }
 
-.sort-icon a {
+.sort-icons {
+  display: flex;
+  flex-basis: 35px;
+  justify-content: space-between;
+}
+
+.icon {
   border: none;
-  opacity: 0.3;
 }
 
-.sort-icon a:hover {
-  opacity: 1;
+.icon:hover path {
+  fill: rgba(0, 0, 0, 1);
 }
 
-/*  не знаю, как изменить цвет svg  */
-.sort-icon a:focus {
-
+.icon:focus path {
+  fill: rgba(129, 179, 210, 1);
 }
+
 
 .hotel-item {
-  padding: 30px 0;
-  border: 1px solid black;
+  display: flex;
+  padding: 30px 73px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hotel-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .hotel-item h2 {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  margin: 0;
+  text-align: left;
 }
 
 .hotel-item p {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
+  margin: 0;
+  padding: 7px 0px;
 }
 
 .hotel-item a {
   padding: 8px 16px;
+}
+
+.hotel-description {
+  max-height: 90px;
+  padding-left: 30px;
+}
+
+.price-description {
+  /* text-align: right; */
+}
+
+.hotel-rating {
+  margin-left: auto;
+}
+
+.stars {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.star {
+  width: 23px;
+  height: 21px;
+  background: url("../img/star.svg") no-repeat 100% 0;
 }
 
 .hotel-item a[href="hotel-info.html"] {
@@ -549,7 +686,7 @@ button[name="button-plus"]:focus {
   background-color: rgba(118, 99, 87, 1);
 }
 
-.hotel-rating {
+.rating-description {
   width: 111px;
   height: 21px;
 
