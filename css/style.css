@@ -302,16 +302,14 @@ button[name="show-form"]:focus {
 
   width: 458px;
   max-height: 395px;
-  padding-top: 40px;
+  padding-top: 44px;
   padding-left: 54px;
   padding-right: 54px;
-  padding-bottom: 53px;
+  padding-bottom: 57px;
   left: 50%;
   transform: translateX(-50%);
 
   background-color: rgba(255, 255, 255, 1);
-
-  /* outline: 1px solid; */
 }
 
 .form-data {
@@ -350,23 +348,68 @@ button[name="show-form"]:focus {
   margin-right: auto;
 }
 
+label[for="adults"] {
+  padding-right: 43px;
+}
+
 .children {
   margin-left: auto;
+}
+
+label[for="children"] {
+  padding-right: 30px;
 }
 
 .date-input {
   width: 346px;
   height: 38px;
+
+  padding-left: 10px;
+  padding-right: 40px;
+  box-sizing: border-box;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000000;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000000;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000000;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #000000;
+}::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000000;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000000;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000000;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #000000;
+}
+
+
+/*ВОПРОС
+Размер кнопок счетчика 38px х 38px
+если инпут между ними сделать таким же размером, то он выступает сверху и снизу на 2px
+Насколько корректно размер инпута изменить на 36px, как я сделала ниже?
+*/
+
 .counter {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
+
+  text-align: center;
 }
 
 .calendar-icon {
   position: absolute;
-  bottom: 5px;
+  bottom: 4px;
   right: 5px;
 
   background-color: transparent;
@@ -385,12 +428,21 @@ button[name="show-form"]:focus {
   fill: rgba(129, 179, 210, 1);
 }
 
+
+/* ВОПРОС
+Насколько - и + приемлемы в таком исполнении? */
+
 button[name="button-minus"],
 button[name="button-plus"] {
   width: 38px;
   height: 38px;
 
   background-color: rgba(242, 242, 242, 1);
+  border: none;
+
+  font-weight: 600;
+  color: #a9a9a9;
+  font-size: 23px;
 }
 
 button[name="button-minus"]:hover,
@@ -429,10 +481,6 @@ button[name="button-plus"]:focus {
 .map {
   position: relative;
   z-index: 1;
-
-  left: 50%;
-  transform: translateX(-50%);
-
 }
 
 .main-footer {
@@ -474,6 +522,11 @@ button[name="button-plus"]:focus {
   list-style: none;
 }
 
+/*ВОПРОС
+svg соц сетей не идеально центрируются по вертикали в ссылках
+как исправить?
+*/
+
 .social li {
   display: flex;
   justify-content: center;
@@ -505,8 +558,17 @@ button[name="button-plus"]:focus {
   align-items: center;
 }
 
+/*ВОПРОС
+не могу сделать идеальной центровку b и логотипа
+
+добавила внутренний отступ снизу 7px у b
+это костыль или такое решение допустимо здесь?
+*/
+
 .copiright b {
   margin-right: 10px;
+  padding-bottom: 7px;
+
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
@@ -604,11 +666,19 @@ button[name="button-plus"]:focus {
   border: none;
 }
 
+
+/*
+ВОПРОС
+Почему иконки сортировки не меняют цвет?
+Что я сделала не так?
+*/
+
 .icon:hover path {
   fill: #000000;
 }
 
-.icon:focus path {
+.icon:focus path,
+.icon:active path {
   fill: rgba(129, 179, 210, 1);
 }
 
@@ -635,8 +705,10 @@ button[name="button-plus"]:focus {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
+
   margin: 0;
-  padding: 7px 0px;
+  padding-bottom: 12px;
+  padding-top: 2px;
 }
 
 .hotel-item a {
@@ -652,16 +724,33 @@ button[name="button-plus"]:focus {
   text-align: left;
 }
 
-.price-description {
-  /* text-align: right; */
+/* ВОПРОС
+Не знаю, как блок с ценой ОТ расположить в соответсии с макетом
+Насколько мой способ верный?  */
+
+.hotel-item:first-child .price-description {
+  padding-left: 30px;
+}
+
+.hotel-item:nth-child(2) .price-description {
+  padding-left: 56px;
+}
+
+.hotel-item:last-child .price-description {
+  padding-left: 15px;
 }
 
 .hotel-rating {
-  /* margin-left: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .stars {
   list-style: none;
+
+  margin: 0;
+
   display: flex;
   justify-content: flex-end;
 }
@@ -691,14 +780,14 @@ button[name="button-plus"]:focus {
 }
 
 .rating-description {
-  width: 111px;
-  height: 21px;
+  /* width: 110px; */
 
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
+  text-align: center;
 
-  padding: 8px 16px;
+  /* padding: 8px 16px; */
   color: rgba(102, 102, 102, 1);
   background-color: rgba(242, 242, 242, 1);
 }
