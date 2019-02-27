@@ -5,5 +5,5 @@ var found_btn = document.querySelector(".btn-found");
 
 show_btn.onclick = function() {
   console.log("CLICK!");
-  hotel_form.classList.add(".show");
+  hotel_form.classList.add("show");
 };

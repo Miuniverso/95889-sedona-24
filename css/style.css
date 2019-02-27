@@ -19,7 +19,7 @@ body {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   text-transform: uppercase;
 
   background-color: rgba(255, 255, 255, 1);
@@ -97,7 +97,7 @@ a {
 }
 
 .main-navigation-links a {
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .main-navigation-links a:hover {
@@ -248,6 +248,7 @@ a {
 /*  FORM  */
 
 .form-hotels {
+  position: relative;
   text-align: center;
 
   padding-top: 12px;
@@ -261,7 +262,7 @@ a {
   margin: 0;
   padding-top: 30px;
 
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .form-description {
@@ -296,7 +297,7 @@ button[name="show-form"]:focus {
 .hotel-form {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
+  position: absolute;
   z-index: 2;
 
   width: 458px;
@@ -377,7 +378,7 @@ button[name="show-form"]:focus {
 }
 
 .calendar-icon:hover path {
-  fill: rgba(0, 0, 0, 1);
+  fill: #000000;
 }
 
 .calendar-icon:focus path {
@@ -394,7 +395,7 @@ button[name="button-plus"] {
 
 button[name="button-minus"]:hover,
 button[name="button-plus"]:hover {
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 button[name="button-minus"]:focus,
@@ -427,22 +428,23 @@ button[name="button-plus"]:focus {
 
 .map {
   position: relative;
-  top: -394px;
+  z-index: 1;
+
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+
 }
 
 .main-footer {
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: -516px;
+  margin-top: -125px;
   padding: 20px 0px;
 
   width: inherit;
   z-index: 2;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -459,7 +461,7 @@ button[name="button-plus"]:focus {
   text-decoration: inherit;
   font-size: 21px;
   line-height: 26px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .social {
@@ -511,7 +513,7 @@ button[name="button-plus"]:focus {
 }
 
 .logo-academy path {
-  fill: rgba(0, 0, 0, 1);
+  fill: #000000;
 }
 
 .logo-academy:hover path {
@@ -549,7 +551,7 @@ button[name="button-plus"]:focus {
   margin: 0;
   padding-left: 50px;
 
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .sort-type {
@@ -583,7 +585,7 @@ button[name="button-plus"]:focus {
 }
 
 .sort-type a:focus {
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   border: none;
 }
 
@@ -603,7 +605,7 @@ button[name="button-plus"]:focus {
 }
 
 .icon:hover path {
-  fill: rgba(0, 0, 0, 1);
+  fill: #000000;
 }
 
 .icon:focus path {
