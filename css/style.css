@@ -425,26 +425,20 @@ button[name="button-plus"]:focus {
   background-color: rgba(84, 150, 189, 1);
 }
 
-/*  Почему-то карту пришлось тяжко выравнивать
-с помощью таких больших цифр: 2167px
-Наверно это костыль.
-Как сделать лучше?  */
 .map {
-  position: absolute;
+  position: relative;
+  top: -394px;
   left: 50%;
-  top: 2167px;
   transform: translateX(-50%);
   z-index: 1;
 }
 
-/*  установка футера через 63px тоже как-то неправильно.
-Но не понимаю, как сделать нормально и адекватно  */
-.footer {
+.main-footer {
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: 63px;
-  padding: 30px 0px;
+  margin-top: -516px;
+  padding: 20px 0px;
 
   width: inherit;
   z-index: 2;
@@ -452,25 +446,30 @@ button[name="button-plus"]:focus {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.inner-footer {
+  display: flex;
+  align-items: center;
+
+  padding: 20px 0;
+}
+
 .hashtag {
-  flex-grow: 1;
+  flex-basis: 33.3333%;
+
+  text-decoration: inherit;
+  font-size: 21px;
+  line-height: 26px;
   color: rgba(0, 0, 0, 1);
 }
 
 .social {
-  flex-grow: 1;
-}
-
-.hashtag {
-  text-decoration: inherit;
-  font-size: 21px;
-  line-height: 26px;
-}
-
-.footer ul {
-  list-style: none;
+  flex-basis: 33.3333%;
   display: flex;
   justify-content: center;
+
+  padding: 0;
+
+  list-style: none;
 }
 
 .social li {
@@ -498,10 +497,9 @@ button[name="button-plus"]:focus {
 }
 
 .copiright {
-  flex-grow: 1;
   display: flex;
-  justify-content: flex-end;
-  padding-right: 29px;
+  justify-content: center;
+  flex-basis: 33.3333%;
   align-items: center;
 }
 
@@ -644,8 +642,12 @@ button[name="button-plus"]:focus {
 }
 
 .hotel-description {
+  flex-grow: 1;
+
   max-height: 90px;
   padding-left: 30px;
+
+  text-align: left;
 }
 
 .price-description {
@@ -653,7 +655,7 @@ button[name="button-plus"]:focus {
 }
 
 .hotel-rating {
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .stars {
@@ -668,7 +670,7 @@ button[name="button-plus"]:focus {
   background: url("../img/star.svg") no-repeat 100% 0;
 }
 
-.hotel-item a[href="hotel-info.html"] {
+.link-left {
   width: 110px;
   height: 27px;
 
@@ -678,7 +680,7 @@ button[name="button-plus"]:focus {
   background-color: rgba(129, 179, 210, 1);
 }
 
-.hotel-item a[href="booking.html"] {
+.link-right {
   width: 142px;
   height: 27px;
 
