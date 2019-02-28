@@ -38,6 +38,10 @@ a {
   margin: -1px;
 }
 
+.show {
+  display: flex;
+}
+
 /*  HEADER + NAVIGATION  */
 
 
@@ -57,10 +61,6 @@ a {
   margin: 0;
   padding: 0;
 }
-
-/*  3.4. Главное меню: четыре ячейки одинаковой ширины.
-Для первых двух пунктов выравнивание текста по левому краю,
-для двух последних — по правому.   */
 
 .main-navigation-links li {
   padding-top: 15px;
@@ -180,12 +180,16 @@ a {
 }
 
 .reason-description p {
-  padding: 0 55px;
+  padding-top: 5px;
 }
 
 .reason-description h3 {
   width: 150px;
   margin: 0 auto 20px auto;
+}
+
+.city-description {
+width: 100%;
 }
 
 .city-description-item {
@@ -205,6 +209,18 @@ a {
   left: 50%;
   top: -88px;
   transform: translateX(-50%);
+}
+
+.city-description-item:nth-child(2):before {
+  margin-left: 6px;
+}
+
+.city-description-item:nth-child(2) {
+  padding-left: 6px;
+}
+
+.city-description-item:last-child {
+  margin-left: 4px;
 }
 
 .item-home::before {
@@ -232,7 +248,7 @@ a {
   font-size: 14px;
   font-weight: normal;
   line-height: 21px;
-  padding: 5px 49px 0;
+  padding: 6px 49px 0;
 }
 
 .reason-with-image {
@@ -251,7 +267,7 @@ a {
   position: relative;
   text-align: center;
 
-  padding-top: 12px;
+  padding-top: 9px;
 }
 
 .form-hotels h3 {
@@ -295,7 +311,6 @@ button[name="show-form"]:focus {
 }
 
 .hotel-form {
-  display: flex;
   flex-wrap: wrap;
   position: absolute;
   z-index: 2;
@@ -344,10 +359,6 @@ button[name="show-form"]:focus {
   width: 100%;
 }
 
-.adults {
-  margin-right: auto;
-}
-
 label[for="adults"] {
   padding-right: 43px;
 }
@@ -393,13 +404,6 @@ label[for="children"] {
   color: #000000;
 }
 
-
-/*ВОПРОС
-Размер кнопок счетчика 38px х 38px
-если инпут между ними сделать таким же размером, то он выступает сверху и снизу на 2px
-Насколько корректно размер инпута изменить на 36px, как я сделала ниже?
-*/
-
 .counter {
   width: 36px;
   height: 36px;
@@ -428,10 +432,6 @@ label[for="children"] {
   fill: rgba(129, 179, 210, 1);
 }
 
-
-/* ВОПРОС
-Насколько - и + приемлемы в таком исполнении? */
-
 button[name="button-minus"],
 button[name="button-plus"] {
   width: 38px;
@@ -445,6 +445,11 @@ button[name="button-plus"] {
   font-size: 23px;
 }
 
+button[name="button-minus"] {
+  font-size: 35px;
+  font-weight: 400;
+}
+
 button[name="button-minus"]:hover,
 button[name="button-plus"]:hover {
   color: #000000;
@@ -453,6 +458,15 @@ button[name="button-plus"]:hover {
 button[name="button-minus"]:focus,
 button[name="button-plus"]:focus {
   color: rgba(129, 179, 210, 1);
+}
+
+.counter {
+    -moz-appearance:textfield;
+}
+
+.counter::-webkit-outer-spin-button,
+.counter::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .btn-found {
@@ -500,7 +514,7 @@ button[name="button-plus"]:focus {
   display: flex;
   align-items: center;
 
-  padding: 20px 0;
+  padding: 26px 0;
 }
 
 .hashtag {
@@ -551,6 +565,12 @@ svg соц сетей не идеально центрируются по вер
   background-color: rgba(84, 150, 189, 1);
 }
 
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .copiright {
   display: flex;
   justify-content: center;
@@ -596,7 +616,7 @@ svg соц сетей не идеально центрируются по вер
 .sort {
   display: flex;
   align-items: center;
-  padding: 0px 73px;
+  padding: 18px 73px;
 
 }
 
@@ -611,7 +631,7 @@ svg соц сетей не идеально центрируются по вер
   font-size: 12px;
   line-height: 18px;
   margin: 0;
-  padding-left: 50px;
+  padding-left: 52px;
 
   color: #000000;
 }
@@ -632,8 +652,8 @@ svg соц сетей не идеально центрируются по вер
   margin-left: auto;
 }
 
-.sort-type li {
-  padding-left: 30px;
+.sort-type li:not(:first-child) {
+  padding-left: 35px;
 }
 
 .sort-type a {
@@ -666,26 +686,26 @@ svg соц сетей не идеально центрируются по вер
   border: none;
 }
 
-
-/*
-ВОПРОС
-Почему иконки сортировки не меняют цвет?
-Что я сделала не так?
-*/
-
-.icon:hover path {
-  fill: #000000;
+.icon polygon,
+.icon polyline {
+  fill: rgba(202, 202, 202, 1)
 }
 
-.icon:focus path,
-.icon:active path {
-  fill: rgba(129, 179, 210, 1);
+.icon:hover polygon,
+.icon:focus polygon,
+.icon:hover polyline,
+.icon:focus polyline  {
+  fill: #231f20;
 }
 
+.icon:active polygon,
+.icon:active polyline  {
+  fill: rgba(129, 179, 210, 1)
+}
 
 .hotel-item {
   display: flex;
-  padding: 30px 73px;
+  padding: 29px 73px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -712,13 +732,13 @@ svg соц сетей не идеально центрируются по вер
 }
 
 .hotel-item a {
-  padding: 8px 16px;
+  padding: 6px 17px;
 }
 
 .hotel-description {
   flex-grow: 1;
 
-  max-height: 90px;
+  /* max-height: 90px; */
   padding-left: 30px;
 
   text-align: left;
@@ -750,6 +770,7 @@ svg соц сетей не идеально центрируются по вер
   list-style: none;
 
   margin: 0;
+  padding: 0;
 
   display: flex;
   justify-content: flex-end;
@@ -780,14 +801,14 @@ svg соц сетей не идеально центрируются по вер
 }
 
 .rating-description {
-  /* width: 110px; */
+  width: 110px;
 
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   text-align: center;
 
-  /* padding: 8px 16px; */
+  padding: 4px 0;
   color: rgba(102, 102, 102, 1);
   background-color: rgba(242, 242, 242, 1);
 }
