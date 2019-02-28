@@ -22,7 +22,7 @@ body {
   color: #000000;
   text-transform: uppercase;
 
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #FFFFFF;
   box-shadow: 5px 0px 15px rgba(0,1,1, 0.2);
 }
 
@@ -101,7 +101,7 @@ a {
 }
 
 .main-navigation-links a:hover {
-  color: rgba(129, 179, 210, 1);
+  color: #81B3D2;
 }
 
 .main-navigation-links a:focus {
@@ -252,8 +252,8 @@ width: 100%;
 }
 
 .reason-with-image {
-  background-color: rgba(129, 179, 210, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: #81B3D2;
+  color: #FFFFFF;
 }
 
 .reason-item:nth-child(n+4) {
@@ -297,7 +297,7 @@ button[name="show-form"] {
   line-height: 26px;
   text-transform: uppercase;
 
-  color: rgba(255, 255, 255, 1);
+  color: #FFFFFF;
   background-color: rgba(118, 99, 87, 1);
 }
 
@@ -324,7 +324,7 @@ button[name="show-form"]:focus {
   left: 50%;
   transform: translateX(-50%);
 
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #FFFFFF;
 }
 
 .form-data {
@@ -348,7 +348,7 @@ button[name="show-form"]:focus {
 }
 
 .hotel-form input:focus {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #FFFFFF;
 }
 
 .arrival,
@@ -429,7 +429,7 @@ label[for="children"] {
 }
 
 .calendar-icon:focus path {
-  fill: rgba(129, 179, 210, 1);
+  fill: #81B3D2;
 }
 
 button[name="button-minus"],
@@ -457,7 +457,7 @@ button[name="button-plus"]:hover {
 
 button[name="button-minus"]:focus,
 button[name="button-plus"]:focus {
-  color: rgba(129, 179, 210, 1);
+  color: #81B3D2;
 }
 
 .counter {
@@ -479,8 +479,8 @@ button[name="button-plus"]:focus {
   font-weight: bold;
 
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(129, 179, 210, 1);
+  color: #FFFFFF;
+  background-color: #81B3D2;
 }
 
 .btn-found:hover {
@@ -536,12 +536,12 @@ button[name="button-plus"]:focus {
   list-style: none;
 }
 
-/*ВОПРОС
-svg соц сетей не идеально центрируются по вертикали в ссылках
-как исправить?
-*/
-
 .social li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -549,7 +549,7 @@ svg соц сетей не идеально центрируются по вер
   width: 46px;
   height: 48px;
 
-  background-color: rgba(129, 179, 210, 1);
+  background-color: #81B3D2;
 }
 
 .social li:nth-child(2) {
@@ -557,13 +557,18 @@ svg соц сетей не идеально центрируются по вер
   margin-right: 6px;
 }
 
-.social li:hover {
+.social-link:hover {
   background-color: rgba(102, 158, 192, 1);
 }
 
-.social li:focus {
+.social-link:focus {
   background-color: rgba(84, 150, 189, 1);
 }
+
+.social-link:active path {
+  fill-opacity: 0.3;
+}
+
 
 .social a {
   display: flex;
@@ -599,7 +604,7 @@ svg соц сетей не идеально центрируются по вер
 }
 
 .logo-academy:hover path {
-  fill: rgba(129, 179, 210, 1);
+  fill: #81B3D2;
 }
 
 .logo-academy:focus path {
@@ -659,11 +664,11 @@ svg соц сетей не идеально центрируются по вер
 .sort-type a {
   color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
-  border-bottom: 1px dashed rgba(129, 179, 210, 1);
+  border-bottom: 1px dashed #81B3D2;
 }
 
 .sort-type a:hover {
-  color: rgba(129, 179, 210, 1);
+  color: #81B3D2;
 }
 
 .sort-type a:focus {
@@ -672,7 +677,7 @@ svg соц сетей не идеально центрируются по вер
 }
 
 .type-current a {
-  color: rgba(129, 179, 210, 1);
+  color: #81B3D2;
   border: none;
 }
 
@@ -738,7 +743,6 @@ svg соц сетей не идеально центрируются по вер
 .hotel-description {
   flex-grow: 1;
 
-  /* max-height: 90px; */
   padding-left: 30px;
 
   text-align: left;
@@ -758,6 +762,16 @@ svg соц сетей не идеально центрируются по вер
 
 .hotel-item:last-child .price-description {
   padding-left: 15px;
+}
+
+.hotel-description h2:hover {
+  color: #81B3D2;
+  cursor: pointer;
+}
+
+.hotel-description h2:focus {
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .hotel-rating {
@@ -788,17 +802,36 @@ svg соц сетей не идеально центрируются по вер
 
   margin: auto;
 
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(129, 179, 210, 1);
+  color: #FFFFFF;
+  background-color: #81B3D2;
 }
 
 .link-right {
   width: 142px;
   height: 27px;
 
-  color: rgba(255, 255, 255, 1);
+  color: #FFFFFF;
   background-color: rgba(118, 99, 87, 1);
 }
+
+.link-left:hover {
+  background-color: rgba(102, 158, 192, 1);
+}
+
+.link-left:focus {
+  background-color: rgba(84, 150, 189, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.link-right:hover {
+  background-color: #604E43;
+}
+
+.link-right:focus {
+  background-color: #604E43;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 
 .rating-description {
   width: 110px;
