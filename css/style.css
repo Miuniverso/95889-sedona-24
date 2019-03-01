@@ -708,6 +708,10 @@ button[name="button-plus"]:focus {
   fill: rgba(129, 179, 210, 1)
 }
 
+.hotels-result {
+  outline: 1px solid;
+}
+
 .hotel-item {
   display: flex;
   padding: 29px 73px;
@@ -732,12 +736,12 @@ button[name="button-plus"]:focus {
   font-weight: normal;
 
   margin: 0;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
   padding-top: 2px;
 }
 
 .hotel-item a {
-  padding: 6px 17px;
+  padding: 5px 16px;
 }
 
 .hotel-description {
