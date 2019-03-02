@@ -1,12 +1,5 @@
-/*  Указывала везде цвет в формате rgba
-Насколько это верно?
- */
-
- /* rgba(0, 0, 0, 1) black
-    rgba(255, 255, 255, 1) white */
-
 html {
-  background-color: rgba(242, 242, 242, 1);
+  background-color: #F2F2F2;
   text-align: center;
 }
 
@@ -179,8 +172,17 @@ a {
   width: 400px;
 }
 
-.reason-description p {
-  padding-top: 5px;
+/*
+чтобы попасть в пиксель перфект пришлось заниматься такой порнографией с паддингами
+это нормально?
+ */
+
+.reason-item:nth-child(n+4) p {
+  padding: 6px 69px;
+}
+
+.reason-item:last-child p {
+  padding: 6px 71px;
 }
 
 .reason-description h3 {
@@ -257,7 +259,7 @@ width: 100%;
 }
 
 .reason-item:nth-child(n+4) {
-  background-color: rgba(238, 238, 238, 1);
+  background-color: #EEEEEE;
   padding: 44px 0;
 }
 
@@ -267,7 +269,7 @@ width: 100%;
   position: relative;
   text-align: center;
 
-  padding-top: 9px;
+  padding-top: 3px;
 }
 
 .form-hotels h3 {
@@ -298,16 +300,16 @@ button[name="show-form"] {
   text-transform: uppercase;
 
   color: #FFFFFF;
-  background-color: rgba(118, 99, 87, 1);
+  background-color: #766357;
 }
 
 button[name="show-form"]:hover {
-  background-color: rgba(96, 78, 67, 1);
+  background-color: #604E43;
 }
 
 button[name="show-form"]:focus {
   color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(80, 62, 51, 1);
+  background-color: #503E33;
 }
 
 .hotel-form {
@@ -339,12 +341,12 @@ button[name="show-form"]:focus {
   font-weight: bold;
   text-transform: uppercase;
 
-  background-color: rgba(242, 242, 242, 1);
+  background-color: #F2F2F2;
   border: none;
 }
 
 .hotel-form input:hover {
-  background-color: rgba(235, 235, 235, 1);
+  background-color: #EBEBEB;
 }
 
 .hotel-form input:focus {
@@ -359,7 +361,7 @@ button[name="show-form"]:focus {
   width: 100%;
 }
 
-label[for="adults"] {
+.adults label {
   padding-right: 43px;
 }
 
@@ -367,7 +369,7 @@ label[for="adults"] {
   margin-left: auto;
 }
 
-label[for="children"] {
+.children label {
   padding-right: 30px;
 }
 
@@ -421,7 +423,7 @@ label[for="children"] {
 }
 
 .calendar-icon path {
-  fill: rgba(202, 202, 202, 1);
+  fill: #CACACA;
 }
 
 .calendar-icon:hover path {
@@ -432,12 +434,12 @@ label[for="children"] {
   fill: #81B3D2;
 }
 
-button[name="button-minus"],
-button[name="button-plus"] {
+.button-minus,
+.button-plus {
   width: 38px;
   height: 38px;
 
-  background-color: rgba(242, 242, 242, 1);
+  background-color: #F2F2F2;
   border: none;
 
   font-weight: 600;
@@ -445,18 +447,18 @@ button[name="button-plus"] {
   font-size: 23px;
 }
 
-button[name="button-minus"] {
+.button-minus {
   font-size: 35px;
   font-weight: 400;
 }
 
-button[name="button-minus"]:hover,
-button[name="button-plus"]:hover {
+.button-minus:hover,
+.button-plus:hover {
   color: #000000;
 }
 
-button[name="button-minus"]:focus,
-button[name="button-plus"]:focus {
+.button-minus:focus,
+.button-plus:focus {
   color: #81B3D2;
 }
 
@@ -484,12 +486,12 @@ button[name="button-plus"]:focus {
 }
 
 .btn-found:hover {
-  background-color: rgba(102, 158, 192, 1);
+  background-color: #669EC0;
 }
 
 .btn-found:focus {
   color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(84, 150, 189, 1);
+  background-color: #5496BD;
 }
 
 .map {
@@ -558,11 +560,11 @@ button[name="button-plus"]:focus {
 }
 
 .social-link:hover {
-  background-color: rgba(102, 158, 192, 1);
+  background-color: #669EC0;
 }
 
 .social-link:focus {
-  background-color: rgba(84, 150, 189, 1);
+  background-color: #5496BD;
 }
 
 .social-link:active path {
@@ -583,13 +585,6 @@ button[name="button-plus"]:focus {
   align-items: center;
 }
 
-/*ВОПРОС
-не могу сделать идеальной центровку b и логотипа
-
-добавила внутренний отступ снизу 7px у b
-это костыль или такое решение допустимо здесь?
-*/
-
 .copiright b {
   margin-right: 10px;
   padding-bottom: 7px;
@@ -607,15 +602,16 @@ button[name="button-plus"]:focus {
   fill: #81B3D2;
 }
 
-.logo-academy:focus path {
-  fill: rgba(202, 202, 202, 1);
+.logo-academy:focus path,
+.logo-academy:active path {
+  fill: #CACACA;
 }
 
 
 /*  HOTELS  */
 
 .link-current {
-  color: rgba(118, 99, 87, 1);
+  color: #766357;
 }
 
 .sort {
@@ -693,7 +689,7 @@ button[name="button-plus"]:focus {
 
 .icon polygon,
 .icon polyline {
-  fill: rgba(202, 202, 202, 1)
+  fill: #CACACA;
 }
 
 .icon:hover polygon,
@@ -705,11 +701,7 @@ button[name="button-plus"]:focus {
 
 .icon:active polygon,
 .icon:active polyline  {
-  fill: rgba(129, 179, 210, 1)
-}
-
-.hotels-result {
-  outline: 1px solid;
+  fill: #81B3D2;
 }
 
 .hotel-item {
@@ -752,20 +744,15 @@ button[name="button-plus"]:focus {
   text-align: left;
 }
 
-/* ВОПРОС
-Не знаю, как блок с ценой ОТ расположить в соответсии с макетом
-Насколько мой способ верный?  */
-
-.hotel-item:first-child .price-description {
-  padding-left: 30px;
+.hotel-type {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
 }
 
-.hotel-item:nth-child(2) .price-description {
-  padding-left: 56px;
-}
-
-.hotel-item:last-child .price-description {
-  padding-left: 15px;
+.price-description {
+  width: 142px;
+  display: inline-block;
 }
 
 .hotel-description h2:hover {
@@ -815,15 +802,15 @@ button[name="button-plus"]:focus {
   height: 27px;
 
   color: #FFFFFF;
-  background-color: rgba(118, 99, 87, 1);
+  background-color: #766357;
 }
 
 .link-left:hover {
-  background-color: rgba(102, 158, 192, 1);
+  background-color: #669EC0;
 }
 
 .link-left:focus {
-  background-color: rgba(84, 150, 189, 1);
+  background-color: #5496BD;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -846,6 +833,6 @@ button[name="button-plus"]:focus {
   text-align: center;
 
   padding: 4px 0;
-  color: rgba(102, 102, 102, 1);
-  background-color: rgba(242, 242, 242, 1);
+  color: #666666;
+  background-color: #F2F2F2;
 }
