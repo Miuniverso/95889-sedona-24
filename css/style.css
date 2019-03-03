@@ -299,6 +299,8 @@ button[name="show-form"] {
   line-height: 26px;
   text-transform: uppercase;
 
+  border: none;
+  outline: none;
   color: #FFFFFF;
   background-color: #766357;
 }
@@ -480,6 +482,8 @@ button[name="show-form"]:focus {
   line-height: 26px;
   font-weight: bold;
 
+  border: none;
+  outline: none;
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #81B3D2;
