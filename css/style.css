@@ -494,9 +494,17 @@ button[name="show-form"]:focus {
   background-color: #5496BD;
 }
 
+/*
+Валидатор забраковал указывание ширины и высоты карты в html
+Можно ли указать высоту в CSS?
+*/
+
 .map {
   position: relative;
   z-index: 1;
+  border: none;
+  width: 1200px;
+  height: 593px;
 }
 
 .main-footer {
