@@ -16,7 +16,8 @@ body {
   text-transform: uppercase;
 
   background-color: #FFFFFF;
-  box-shadow: 5px 0px 15px rgba(0,1,1, 0.2);
+  -webkit-box-shadow: 5px 0px 15px rgba(0,1,1, 0.2);
+          box-shadow: 5px 0px 15px rgba(0,1,1, 0.2);
 }
 
 a {
@@ -32,7 +33,22 @@ a {
 }
 
 .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  animation-name: slow-show;
+  animation-duration: 0.8s;
+}
+
+@@keyframes slow-show {
+  from {
+    transform: translate(50%, -400px);
+  }
+
+  to {
+    transform: translate(50%, 0px);
+  }
+
 }
 
 /*  HEADER + NAVIGATION  */
@@ -45,20 +61,18 @@ a {
 
 }
 
-
-/*
-Не работала еще с автопрефиксером
-Поэтому в IE всё ужасно
-
-Хотела уточнить, что, кроме флексов, надо прогрнать через него
-*/
-
 .main-navigation-links {
   list-style: none;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0;
   padding: 0;
 }
@@ -94,7 +108,9 @@ a {
 .main-logo {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .main-navigation-links a {
@@ -157,16 +173,22 @@ a {
 
 .reasons-list,
 .city-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
 
   padding: 0;
 }
 
 .reason-with-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -174,16 +196,18 @@ a {
 }
 
 .reason-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 400px;
 }
-
-/*
-чтобы попасть в пиксель перфект пришлось заниматься такой порнографией с паддингами
-это нормально?
- */
 
 .reason-item:nth-child(n+4) p {
   padding: 6px 69px;
@@ -207,7 +231,8 @@ width: 100%;
 }
 
 .city-description li {
-  flex-basis: 33%;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
   margin: 140px 0 67px;
 }
 
@@ -218,7 +243,9 @@ width: 100%;
   height: 80px;
   left: 50%;
   top: -88px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .city-description-item:nth-child(2):before {
@@ -323,7 +350,8 @@ button[name="show-form"]:focus {
 }
 
 .hotel-form {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
   z-index: 2;
 
@@ -334,14 +362,20 @@ button[name="show-form"]:focus {
   padding-right: 54px;
   padding-bottom: 57px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 
   background-color: #FFFFFF;
 }
 
 .form-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
 }
 
@@ -366,8 +400,12 @@ button[name="show-form"]:focus {
 .arrival,
 .departure {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
@@ -389,7 +427,8 @@ button[name="show-form"]:focus {
 
   padding-left: 10px;
   padding-right: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -521,8 +560,12 @@ button[name="show-form"]:focus {
 
 .main-footer {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: -125px;
   padding: 20px 0px;
 
@@ -533,14 +576,19 @@ button[name="show-form"]:focus {
 }
 
 .inner-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   padding: 26px 0;
 }
 
 .hashtag {
-  flex-basis: 33.3333%;
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
 
   text-decoration: inherit;
   font-size: 21px;
@@ -549,9 +597,14 @@ button[name="show-form"]:focus {
 }
 
 .social {
-  flex-basis: 33.3333%;
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
   padding: 0;
 
@@ -559,14 +612,24 @@ button[name="show-form"]:focus {
 }
 
 .social li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   width: 46px;
   height: 48px;
@@ -593,16 +656,29 @@ button[name="show-form"]:focus {
 
 
 .social a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .copiright {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-basis: 33.3333%;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .copiright b {
@@ -635,8 +711,12 @@ button[name="show-form"]:focus {
 }
 
 .sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 18px 73px;
 
 }
@@ -658,6 +738,8 @@ button[name="show-form"]:focus {
 }
 
 .sort-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   margin: 0;
@@ -698,9 +780,14 @@ button[name="show-form"]:focus {
 }
 
 .sort-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-basis: 35px;
-  justify-content: space-between;
+  -ms-flex-preferred-size: 35px;
+      flex-basis: 35px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .icon {
@@ -725,6 +812,8 @@ button[name="show-form"]:focus {
 }
 
 .hotel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 29px 73px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -757,7 +846,9 @@ button[name="show-form"]:focus {
 }
 
 .hotel-description {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 
   padding-left: 30px;
 
@@ -786,9 +877,16 @@ button[name="show-form"]:focus {
 }
 
 .hotel-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .stars {
@@ -797,8 +895,14 @@ button[name="show-form"]:focus {
   margin: 0;
   padding: 0;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .star {
