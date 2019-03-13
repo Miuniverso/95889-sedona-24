@@ -727,14 +727,18 @@ button[name="show-form"]:focus {
   background: url("../img/filter-background.jpg") no-repeat no-repeat;
 }
 
-.infrastructure {
-  display: flex;
-  flex: 1;
-}
-
+.infrastructure,
 .type-of-housing {
   display: flex;
+  flex-direction: column;
   flex: 1;
+
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: left;
 }
 
 .cost-day {
@@ -746,6 +750,15 @@ button[name="show-form"]:focus {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
+}
+
+.filter-list {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-item {
+  list-style-type: none;
 }
 
 .sort {
