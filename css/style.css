@@ -710,6 +710,44 @@ button[name="show-form"]:focus {
   color: #766357;
 }
 
+.filter-hotels {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 32px;
+  padding-left: 73px;
+  padding-right: 73px;
+
+  color: #FFFFFF;
+
+  background: url("../img/filter-background.jpg") no-repeat no-repeat;
+}
+
+.infrastructure {
+  display: flex;
+  flex: 1;
+}
+
+.type-of-housing {
+  display: flex;
+  flex: 1;
+}
+
+.cost-day {
+  display: flex;
+  flex: 2;
+}
+
+.filter-description {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
 .sort {
   display: -webkit-box;
   display: -ms-flexbox;
