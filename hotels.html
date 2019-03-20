@@ -27,46 +27,62 @@
     <section class="filter">
       <h1 class="visually-hidden">Гостиницы в Седоне</h1>
       <form class="filter-hotels">
+
+        <div class="checkbox-wrapper">
+
         <div class="infrastructure">
           <h2 class="filter-description">Инфраструктура:</h2>
-
           <ul class="filter-list">
             <li class="filter-item">
-              <input type="checkbox" id="pool" />
+              <input type="checkbox" id="pool" checked class="visually-hidden checkbox-item" />
               <label for="pool">Бассейн</label>
             </li>
             <li class="filter-item">
-              <input type="checkbox" id="parking" />
+              <input type="checkbox" id="parking" name="filter-parking" class="visually-hidden checkbox-item" />
               <label for="parking">Парковка</label>
             </li>
             <li class="filter-item">
-              <input type="checkbox" id="wi-fi" />
+              <input type="checkbox" id="wi-fi" name="filter-wi-fi" class="visually-hidden checkbox-item" />
               <label for="wi-fi">Wi-Fi</label>
             </li>
           </ul>
-
         </div>
+
         <div class="type-of-housing">
           <h2 class="filter-description">Тип жилья:</h2>
-
           <ul class="filter-list">
             <li class="filter-item">
-              <input type="checkbox" id="hotel" />
+              <input type="checkbox" id="hotel" name="filter-hotel" class="visually-hidden checkbox-item" checked />
               <label for="hotel">Гостиница</label>
             </li>
             <li class="filter-item">
-              <input type="checkbox" id="motel" />
+              <input type="checkbox" id="motel" name="filter-motel" class="visually-hidden checkbox-item" checked />
               <label for="motel">Мотель</label>
             </li>
             <li class="filter-item">
-              <input type="checkbox" id="apartments" />
+              <input type="checkbox" id="apartments" name="filter-apartments" class="visually-hidden checkbox-item" checked />
               <label for="apartments">Апартаменты</label>
             </li>
           </ul>
+        </div>
 
         </div>
+
+
         <div class="cost-day">
           <h2 class="filter-description">Стоимость в сутки (Р):</h2>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+        </div>
+          <div class="range-toggle range-toggle-min"></div>
+          <div class="range-toggle range-toggle-max"></div>
+          </div>
+      <button class="btn-transparent" type="submit">Показать</button>
         </div>
       </form>
     </section>
