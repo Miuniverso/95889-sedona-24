@@ -1,3 +1,4 @@
+
 html {
   background-color: #F2F2F2;
   text-align: center;
@@ -30,25 +31,6 @@ a {
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-
-.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  animation-name: slow-show;
-  animation-duration: 0.8s;
-}
-
-@@keyframes slow-show {
-  from {
-    transform: translate(50%, -400px);
-  }
-
-  to {
-    transform: translate(50%, 0px);
-  }
-
 }
 
 /*  HEADER + NAVIGATION  */
@@ -133,6 +115,7 @@ a {
   background-image: url("../img/polygon.svg"), url("../img/background.jpg");
   background-position: bottom center, 50% 21%;
   background-repeat: no-repeat, no-repeat;
+  background-color: #d5e6f0;
   padding-bottom: 70px;
 }
 
@@ -369,6 +352,29 @@ button[name="show-form"]:focus {
   background-color: #FFFFFF;
 }
 
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation-name: slow-show;
+          animation-name: slow-show;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+}
+
+@@keyframes slow-show {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
 .form-data {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,7 +382,6 @@ button[name="show-form"]:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-
 }
 
 .hotel-form input {
@@ -545,11 +550,6 @@ button[name="show-form"]:focus {
   background-color: #5496BD;
 }
 
-/*
-Валидатор забраковал указывание ширины и высоты карты в html
-Можно ли указать высоту в CSS?
-*/
-
 .map {
   position: relative;
   z-index: 1;
@@ -583,7 +583,7 @@ button[name="show-form"]:focus {
       -ms-flex-align: center;
           align-items: center;
 
-  padding: 26px 0;
+  padding: 22px 0;
 }
 
 .hashtag {
@@ -711,31 +711,47 @@ button[name="show-form"]:focus {
 }
 
 .filter-hotels {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  /* width: 100%; */
-  flex-direction: row;
-  justify-content: space-between;
-  /* align-items: center; */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
 
   padding-top: 15px;
   padding-left: 73px;
   padding-right: 73px;
+  padding-bottom: 6px;
 
   color: #FFFFFF;
 
-  background: url("../img/filter-background.jpg") no-repeat no-repeat;
+  background: url("../img/filter-background.jpg") no-repeat 25% 14% #658db6;
 }
 
 .checkbox-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .infrastructure,
 .type-of-housing {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /* flex: 1; */
 
   margin: 0;
@@ -752,16 +768,13 @@ button[name="show-form"]:focus {
 
 .cost-day {
   text-align: left;
-  /* display: flex;
-  flex-direction: column; */
-  /* flex: 2; */
 }
 
 .price-controls {
   position: relative;
 
-  height: 36px;
-  margin-bottom: 20px;
+  height: 33px;
+  margin-bottom: 19px;
   font-size: 0;
 
   border: 2px solid #ffffff;
@@ -779,15 +792,19 @@ button[name="show-form"]:focus {
   height: 22px;
 
   background: #ffffff;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .price-controls label {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
+  line-height: 21px;
+
+  padding-top: 5px;
+  /* vertical-align: top; */
 
   cursor: pointer;
 }
@@ -795,7 +812,7 @@ button[name="show-form"]:focus {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 66px;
 }
 
 .price-controls input {
@@ -807,6 +824,11 @@ button[name="show-form"]:focus {
 
   background: none;
   border: none;
+}
+
+.price-controls .max-price {
+  padding-left: 56px;
+  padding-right: 10px;
 }
 
 .range-controls {
@@ -838,7 +860,8 @@ button[name="show-form"]:focus {
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+          box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
 
@@ -856,8 +879,8 @@ button[name="show-form"]:focus {
 
 .btn-transparent {
   display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
+  margin: 0px 82px;
+  padding: 6px 33px;
 
   font-size: 14px;
   line-height: 20px;
@@ -905,7 +928,7 @@ button[name="show-form"]:focus {
   content: "";
 
   position: absolute;
-  top: 1px;
+  top: 0px;
   left: -1px;
 
   width: 26px;
@@ -921,6 +944,11 @@ button[name="show-form"]:focus {
   background-image: url("../img/checkbox-on.svg");
 }
 
+.checkbox-item:disabled + label::before,
+.checkbox-item:checked:disabled + label::before {
+  opacity: 0.3;
+}
+
 .filter-item label {
   padding-left: 40px;
 }
@@ -934,7 +962,8 @@ button[name="show-form"]:focus {
           align-items: center;
   padding-left: 73px;
   padding-right: 73px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
+    padding-top: 18px;
 
 }
 
@@ -1054,7 +1083,7 @@ button[name="show-form"]:focus {
   font-weight: normal;
 
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   padding-top: 2px;
 }
 
@@ -1141,6 +1170,8 @@ button[name="show-form"]:focus {
 .link-right {
   width: 142px;
   height: 27px;
+
+  margin-left: 4px;
 
   color: #FFFFFF;
   background-color: #766357;

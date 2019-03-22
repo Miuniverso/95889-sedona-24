@@ -9,7 +9,6 @@ var children = document.querySelector("input[name=count-children]");
 // localStorage {key: "adults", length: adults.value }
 
 show_btn.onclick = function() {
-  console.log("CLICK!");
   hotel_form.classList.toggle("visually-hidden");
   hotel_form.classList.toggle("show");
 };
