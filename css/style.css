@@ -161,6 +161,7 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+
   list-style: none;
 
   padding: 0;
@@ -387,34 +388,54 @@ button[name="show-form"]:focus {
     opacity: 1;
     margin-top: 0;
   }
-
 }
 
 .modal-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
+@-webkit-keyframes shake {
+0%,
+100% {
+  margin: 0;
+}
+
+10%,
+30%,
+50%,
+70%,
+90% {
+  margin-left: -10px;
+}
+
+20%,
+40%,
+60%,
+80% {
+  margin-left: 10px;
+  }
 }
 
 @keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
+0%,
+100% {
+  margin: 0;
+}
 
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    margin-left: -10px;
-    /* transform: translateX(-10px); */
-  }
+10%,
+30%,
+50%,
+70%,
+90% {
+  margin-left: -10px;
+}
 
-  20%,
-  40%,
-  60%,
-  80% {
-    margin-right: 10px;
-    /* transform: translateX(10px); */
+20%,
+40%,
+60%,
+80% {
+  margin-left: 10px;
   }
 }
 
@@ -454,6 +475,7 @@ button[name="show-form"]:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+
   width: 100%;
 }
 
@@ -560,7 +582,7 @@ button[name="show-form"]:focus {
 }
 
 .counter {
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
 }
 
 .counter::-webkit-outer-spin-button,
@@ -609,6 +631,7 @@ button[name="show-form"]:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
   margin-top: -125px;
   padding: 20px 0px;
 
@@ -847,7 +870,7 @@ button[name="show-form"]:focus {
   line-height: 21px;
 
   padding-top: 5px;
-  /* vertical-align: top; */
+  vertical-align: top;
 
   cursor: pointer;
 }
@@ -983,6 +1006,10 @@ button[name="show-form"]:focus {
   background-repeat: no-repeat;
 
   cursor: pointer;
+}
+
+.checkbox-item:focus + label::before {
+  outline: 2px solid #81B3D2;
 }
 
 .checkbox-item:checked + label::before {
@@ -1155,6 +1182,7 @@ button[name="show-form"]:focus {
 .price-description {
   width: 142px;
   display: inline-block;
+  vertical-align: top;
 }
 
 .hotel-description h2:hover {
