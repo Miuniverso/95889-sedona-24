@@ -110,13 +110,27 @@ a {
 /*  CONTENT  */
 
 .intro {
+  position: relative;
+
   text-align: center;
 
-  background-image: url("../img/polygon.svg"), url("../img/background.jpg");
-  background-position: bottom center, 50% 21%;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url("../img/background.jpg");
+  background-position:50% 21%;
+  background-repeat: no-repeat;
   background-color: #d5e6f0;
   padding-bottom: 70px;
+}
+
+.intro::after {
+  content: '';
+  width: 100%;
+  height: 57px;
+  left: 0;
+  bottom: 0px;
+  position: absolute;
+  background-image: url(../img/polygon.svg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .intro-welcome {
@@ -176,7 +190,10 @@ a {
   width: 100%;
   padding: 0;
   margin: 0;
-  max-height: 256px;
+}
+
+.reason-image {
+  height: 256px;
 }
 
 .reason-description {
@@ -208,6 +225,10 @@ a {
 
 .reason-with-image h3 {
   width: 160px;
+}
+
+.city-description-wrapper {
+  width: 1200px;
 }
 
 .city-description {
@@ -499,6 +520,15 @@ button[name="show-form"]:active {
   padding-right: 30px;
 }
 
+/*
+Для IE
+*/
+
+.date-info {
+  width: 112px;
+  text-align: left;
+}
+
 .date-input {
   width: 346px;
   height: 38px;
@@ -715,7 +745,7 @@ button[name="show-form"]:active {
   background-color: #81B3D2;
 }
 
-.social li:nth-child(2) {
+.social li:not(:first-child):not(:last-child) {
   margin-left: 6px;
   margin-right: 6px;
 }
