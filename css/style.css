@@ -873,7 +873,6 @@ button[name="show-form"]:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* flex: 1; */
 
   margin: 0;
 
@@ -992,6 +991,9 @@ button[name="show-form"]:active {
 .range-toggle:hover,
 .range-toggle:focus {
   border: 10px solid #ffffff;
+  -webkit-transform: translate(-2px, -2px);
+      -ms-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px);
 }
 
 .range-toggle-min {
